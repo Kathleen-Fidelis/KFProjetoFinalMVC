@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<nav class="navbar navbar-expand-lg navbar-dark bg-success mb-5">
 	  <div class="container-fluid">
 	    <a class="navbar-brand" href="#">RaiaDrogasil</a>
@@ -24,21 +25,22 @@
 	</nav>
 
 	<div class="container w-50" style="outline: 1px solid #cccccc;">
-		<form>
+		<form method="post" action="ProjetoFinalServlet">
 		 <h1 class="mt-3">Adicionar usuário</h1>
+		 <input type="hidden" name="id" value=${id}>
 		  <div class="mb-3">
 		    <label for="exampleInputNome1" class="form-label">Nome</label>
-		    <input type="text" class="form-control" id="exampleInputNome1">
+		    <input type="text" class="form-control" name="nome" value=${nome}>
 		  </div>
 		  <div class="mb-3">
 		    <label for="exampleInputEmail1" class="form-label">Email</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1">
+		    <input type="email" class="form-control" name="email" value=${email}>
 		  </div>
 		  <div class="mb-3">
 		    <label for="exampleInputPais" class="form-label">País</label>
-		    <input type="text" class="form-control" id="exampleInputPais">
+		    <input type="text" class="form-control" name="pais" value=${pais}>
 		  </div>
-		  <a href="index.html"><button type="button" class="btn btn-primary col-2 mb-3">Salvar</button></a>
+		  <a href="index.jsp"><button type="submit" class="btn btn-primary col-2 mb-3">Salvar</button></a>
 		</form>
 	</div>
 </body>
